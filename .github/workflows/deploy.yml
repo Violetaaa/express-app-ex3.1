@@ -1,10 +1,11 @@
 name: Deployment pipeline for a simple NodeJS/Express app
 
+# Se ejecuta cuando se realice una subida a la rama main
 on:
   push:
     branches:
       - main
-
+jobs:
   publish-docker-hub:
     name: Publish image to Docker Hub
     runs-on: ubuntu-latest
